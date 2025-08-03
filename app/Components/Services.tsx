@@ -4,12 +4,8 @@ import Image from 'next/image'
 
 const Services = () => {
 
-    const [isDarkMode, setIsDarkMode] = useState(false)
-        
-        const handleThemeToggle = () => {
-            setIsDarkMode(prev => !prev)
-          }
-        
+    const [isDarkMode] = useState(false)
+                
           // Apply/remove .dark-theme on <body> when isDarkMode changes
           useEffect(() => {
             if (isDarkMode) {
@@ -31,7 +27,7 @@ const Services = () => {
         </h2>
 
         <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-serif'>
-            I'm a passionate and dedicated developer with a strong foundation
+            I&apos;m a passionate and dedicated developer with a strong foundation
             in web development. I have experience with Next.JS, TypeScript, Python,
             Generative AI, Agentic AI & OpenAI Agents SDK.
         </p>

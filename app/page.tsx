@@ -32,7 +32,7 @@ export default function Home() {
   // }, [isDarkMode])
 
 
-  const [isDark, setIsDark] = useState(false);
+  const [isDark] = useState(false);
 
   useEffect(() => {
     document.body.classList.toggle('dark-theme', isDark);

@@ -6,11 +6,8 @@ import { assets, infoList, toolsData } from '@/assets/assets'
 
 const About = () => {
 
-    const [isDarkMode, setIsDarkMode] = useState(false)
+    const [isDarkMode] = useState(false)
     
-    const handleThemeToggle = () => {
-        setIsDarkMode(prev => !prev)
-      }
     
       // Apply/remove .dark-theme on <body> when isDarkMode changes
       useEffect(() => {

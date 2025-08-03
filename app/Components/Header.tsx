@@ -14,7 +14,7 @@ const Header = () => {
             />
         </div>
         <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-serif '>
-            Hi! I'm Maryam Arif 
+            Hi! I&apos;m Maryam Arif 
             <Image
                 src={assets.hand_icon}
                 alt=''
@@ -25,7 +25,7 @@ const Header = () => {
             Full-Stack Web Developer based in Pakistan.
         </h1>
         <p className='max-w-2xl mx-auto font-outfit'>
-            I'm a passionate and dedicated developer with a strong foundation in web development. I have experience with Next.JS, TypeScript, Python, Generative AI, Agentic AI & OpenAI Agents SDK.
+            I&apos;m a passionate and dedicated developer with a strong foundation in web development. I have experience with Next.JS, TypeScript, Python, Generative AI, Agentic AI & OpenAI Agents SDK.
         </p>
 
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>

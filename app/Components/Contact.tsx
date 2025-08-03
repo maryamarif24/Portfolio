@@ -5,30 +5,30 @@ import Image from 'next/image'
 import { assets } from '@/assets/assets'
 
 const Contact = () => {
-  const [result, setResult] = useState("")
+  const [result, setResult] = React.useState("");
 
-  const onSubmit = async (event: any) => {
-    event.preventDefault()
-    setResult("Sending...")
-    const formData = new FormData(event.target)
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.currentTarget);
 
-    formData.append("access_key", "e8bb7855-c211-4ad3-8f7f-52746d88d15a")
+    formData.append("access_key", "e8bb7855-c211-4ad3-8f7f-52746d88d15a");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData
-    })
+    });
 
-    const data = await response.json()
+    const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully")
-      event.target.reset()
+      setResult("Form Submitted Successfully");
+      event.currentTarget.reset();
     } else {
-      console.log("Error", data)
-      setResult(data.message)
+      console.log("Error", data);
+      setResult(data.message);
     }
-  }
+  };
 
   return (
     <div
@@ -44,7 +44,7 @@ const Contact = () => {
       </h2>
 
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-serif'>
-        I'd love to hear from you! If you have any questions, comments, or feedback,
+        I&apos;d love to hear from you! If you have any questions, comments, or feedback,
         please use the form below.
       </p>
 
