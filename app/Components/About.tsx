@@ -46,7 +46,7 @@ const About = () => {
                 </p>
 
                 <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
-                    {infoList.map(({icon, iconDark, title, description}, index) => (
+                    {infoList.map(({icon, iconDark, title, description, description2}, index) => (
                         <li key={index} className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:-translate-y-1 duration-500 hover:[box-shadow:var(--box-shadow-black)] dark-theme:hover:[box-shadow:var(--box-shadow-white)]'>
                             <Image
                                 src={isDarkMode ? iconDark : icon}
@@ -58,6 +58,9 @@ const About = () => {
                             </h3>
                             <p className={`text-sm ${isDarkMode ? 'text-gray-700' : ''}`}>
                                 {description}
+                                <br />
+                                <br />
+                                {description2}
                             </p>
                         </li>
                     ))}
