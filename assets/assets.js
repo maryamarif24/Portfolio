@@ -38,12 +38,24 @@ import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import pfp_01 from './pfp_01.png';
 import name_logo from './name_logo.png';
-import name_01 from './name_01.png'
-import logo_1 from './logo_1.png'
-import robot from './robot.png'
-import ui from './UI.png'
-import web from './web.png'
-import ai from './ai.png'
+import name_01 from './name_01.png';
+import logo_1 from './logo_1.png';
+import robot from './robot.png';
+import ui from './UI.png';
+import web from './web.png';
+import ai from './ai.png';
+import github from './Github.svg';
+import github_dark from './github-dark.svg';
+import fb from './Facebook.svg';
+import fb_dark from './fb-dark.svg';
+import yt from './Yt.svg';
+import yt_dark from './yt-dark.svg';
+import ig from './Instagram.svg';
+import ig_dark from './ig-dark.svg';
+import be from './Behance.svg';
+import be_dark from './be-dark.svg';
+import linkedin from './In.svg'
+import in_dark from './in-dark.svg';
 
 export const assets = {
     user_image,
@@ -91,7 +103,19 @@ export const assets = {
     robot,
     ui,
     web,
-    ai
+    ai,
+    be,
+    be_dark,
+    github,
+    github_dark,
+    fb,
+    fb_dark,
+    yt,
+    yt_dark,
+    ig,
+    ig_dark,
+    linkedin,
+    in_dark,
 };
 
 

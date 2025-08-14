@@ -38,10 +38,10 @@ const Header = () => {
                 />
             </a>
 
-            <a href="/maryam_arif.pdf" download className='px-10 font-outfit py-3 border rounded-full border-gray-500 flex items-center gap-2 '>
-                My Resume
+            <a href="#getintouch" className='px-10 font-outfit py-3 border rounded-full border-gray-500 flex items-center gap-2 '>
+                Get in Touch
                 <Image
-                    src={assets.download_icon}
+                    src={assets.right_arrow}
                     alt="Right Arrow"
                     className='w-4 '
                 />

@@ -8,6 +8,7 @@ import Work from "./Components/Work";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import { useEffect, useState } from "react";
+import GetInTouch from "./Components/GetInTouch";
 
 export default function Home() {
   
@@ -47,6 +48,7 @@ export default function Home() {
       <Services />
       <Work />
       <Contact />
+      <GetInTouch />
       <Footer />
 
     </div>

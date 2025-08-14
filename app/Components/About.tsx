@@ -6,8 +6,11 @@ import { assets, infoList, toolsData } from '@/assets/assets'
 
 const About = () => {
 
-    const [isDarkMode] = useState(false)
+    const [isDarkMode, setIsDarkMode] = useState(false)
     
+        const handleThemeToggle = () => {
+            setIsDarkMode(prev => !prev)
+        }
     
       // Apply/remove .dark-theme on <body> when isDarkMode changes
       useEffect(() => {
@@ -17,6 +20,14 @@ const About = () => {
           document.body.classList.remove('dark-theme')
         }
       }, [isDarkMode])
+
+      useEffect(() => {
+              const observer = new MutationObserver(() => {
+              setIsDarkMode(document.body.classList.contains('dark-theme'));
+              });
+              observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+              return () => observer.disconnect();
+        }, []);
 
   return (
     <div id='about' className='w-full px-[12%] py-10 scroll-mt-20 '>
@@ -47,16 +58,16 @@ const About = () => {
 
                 <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
                     {infoList.map(({icon, iconDark, title, description, description2}, index) => (
-                        <li key={index} className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:-translate-y-1 duration-500 hover:[box-shadow:var(--box-shadow-black)] dark-theme:hover:[box-shadow:var(--box-shadow-white)]'>
+                        <li key={index} className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:-translate-y-1 duration-500 hover:[box-shadow:var(--box-shadow-black)] dark-theme:hover:[box-shadow:var(--box-shadow-white)]'  rel="noopener noreferrer">
                             <Image
                                 src={isDarkMode ? iconDark : icon}
                                 alt={title}
                                 className='w-7 mt-3'
                             />
-                            <h3 className={`my-4 font-semibold ${isDarkMode ? 'text-gray-700' : ''}`}>
+                            <h3 className={`my-4 font-semibold ${isDarkMode ? 'text-white' : ''}`}  rel="noopener noreferrer">
                                 {title}
                             </h3>
-                            <p className={`text-sm ${isDarkMode ? 'text-gray-700' : ''}`}>
+                            <p className={`text-sm ${isDarkMode ? 'text-white' : ''}`}>
                                 {description}
                                 <br />
                                 <br />
