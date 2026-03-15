@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
         <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6 '>
-            <p>© 2025 Maryam Arif. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Maryam Arif. All rights reserved.</p>
             <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0 font-outfit'>
                 <li>
                     <a target='_blank' className='transform transition duration-300 hover:-translate-y-2 hover:text-blue-600' href="https://github.com/maryamarif24">GitHub</a>

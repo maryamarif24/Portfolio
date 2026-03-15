@@ -1,14 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
+import Link from 'next/link'
 
 const Header = () => {
     
   return (
-    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 '>
+    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-25 '>
         <div>
             <Image
-                src={assets.pfp_01}
+                src={assets.maryamarif}
                 alt="Profile Picture"
                 className='rounded-full w-32 transition delay-50 duration-300 ease-in-out hover:scale-110 '
             />
@@ -25,7 +26,7 @@ const Header = () => {
             Full-Stack Web Developer based in Pakistan.
         </h1>
         <p className='max-w-2xl mx-auto font-outfit'>
-            I&apos;m a passionate and dedicated developer with a strong foundation in web development. I have experience with Next.JS, TypeScript, Python, Generative AI, Agentic AI & OpenAI Agents SDK.
+            I&apos;m a passionate and dedicated developer with a strong foundation in web development. I am the <b>CEO & Founder</b> of <Link href={"https://nexeagent.com"} target='_blank' className='text-blue-600'><b>Nexe-Agent</b></Link>. I have experience with Next.JS, TypeScript, Python, Generative AI, Agentic AI & OpenAI Agents SDK.
         </p>
 
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>

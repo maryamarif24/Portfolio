@@ -7,10 +7,7 @@ import { assets, infoList, toolsData } from '@/assets/assets'
 const About = () => {
 
     const [isDarkMode, setIsDarkMode] = useState(false)
-    
-        const handleThemeToggle = () => {
-            setIsDarkMode(prev => !prev)
-        }
+
     
       // Apply/remove .dark-theme on <body> when isDarkMode changes
       useEffect(() => {
@@ -42,7 +39,7 @@ const About = () => {
         <div  className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
             <div className='w-64 sm:w-80 rounded-3xl max-w-none'>
                 <Image
-                    src={assets.pfp_01}
+                    src={assets.maryamarif}
                     alt="user image"
                     className='w-full rounded-3xl'
                 />
@@ -50,9 +47,9 @@ const About = () => {
             
             <div className='flex-1'>
                 <p className='mb-10 max-w-2xl font-serif'>
-                    I am an Experienced Full-Stack Developer with over 2+ years of professional
+                    I am an Experienced Full-Stack Developer with over 3+ years of professional
                     experience in building scalable and efficient web applications. I have a strong 
-                    foundation in JavaScript, HTML/CSS, and React. I am passionate about staying up-to-date
+                    foundation in Python, Next.JS, TypeScript, JavaScript, HTML/CSS, and React.<br></br> I am passionate about staying up-to-date
                     with the latest technologies and trends in the industry.
                 </p>
 

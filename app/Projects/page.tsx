@@ -1,32 +1,38 @@
 import { assets, workData } from '@/assets/assets'
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
-const Work = () => {
+const ProjectsPage = () => {
   return (
-    <div id='work' className='w-full px-[12%] py-10 scroll-mt-20 font-sans '>
-        <h4 className='text-center mb-2 text-lg font-serif'>
-            My Portfolio
-        </h4>
+    <div className='w-full px-[12%] py-10 min-h-screen font-sans bg-[#fdf8ff]'>
+        
+        {/* Navigation / Back Button */}
+        <Link href="/" className='flex items-center gap-2 text-gray-700 hover:text-black transition duration-300 mb-10'>
+            <Image src={assets.right_arrow_bold} alt="" className="w-4 rotate-180" />
+            <span>Back to Home</span>
+        </Link>
 
-        <h2 className='text-center text-5xl font-serif'>
-            My Latest Work
+        <h2 className='text-center text-5xl font-serif mb-4'>
+            All Projects
         </h2>
-
-        <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-serif'>
-            Welcome to my Web Development Portfolio! Explore a collection of Projects
-            showcasing my expertise in Full-Stack Development.
+        <p className='text-center max-w-2xl mx-auto mb-16 text-gray-600 font-serif'>
+            A comprehensive look at my journey in AI automation, full-stack development, and digital design.
         </p>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-10 gap-8 font-sans'>
+        {/* Full Grid of Projects */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
             {workData.map((project, index) => (
-                <div key={index} className="flex flex-col group">
+                <div key={index} className="flex flex-col group animate-fadeIn" style={{animationDelay: `${index * 0.1}s`}}>
+                    {/* Image Container */}
                     <div 
                         style={{ backgroundImage: `url(${project.bgImage})` }} 
                         className="aspect-video bg-no-repeat bg-cover bg-center rounded-t-lg border border-gray-200 cursor-pointer overflow-hidden"
                     >
                         <div className="w-full h-full bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
                     </div>
+
+                    {/* Content Area */}
                     <div className='bg-white border-x border-b border-gray-200 rounded-b-lg py-4 px-5 flex items-center justify-between transition-all duration-300 group-hover:border-lime-400'>
                         <div>
                             <h2 className='font-semibold text-black text-lg'>{project.title}</h2>
@@ -46,17 +52,12 @@ const Work = () => {
             ))}
         </div>
 
-        <a href="/Projects" className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[#fcf4ff] duration-500'>
-            Show More
-            <Image
-                src={assets.right_arrow_bold}
-                alt=""
-                className="w-4"
-            />
-        </a>
-
+        {/* Footer section for the projects page */}
+        <footer className='mt-20 text-center text-gray-500 text-sm'>
+            <p>© {new Date().getFullYear()} Maryam Arif. All rights reserved.</p>
+        </footer>
     </div>
   )
 }
 
-export default Work
+export default ProjectsPage

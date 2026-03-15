@@ -6,9 +6,6 @@ const GetInTouch = () => {
 
     const [isDarkMode, setIsDarkMode] = useState(false)
 
-    const handleThemeToggle = () => {
-        setIsDarkMode(prev => !prev)
-    }
 
     useEffect(() => {
         if (isDarkMode) {

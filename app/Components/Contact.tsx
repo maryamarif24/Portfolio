@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 
@@ -92,3 +92,5 @@ const Contact = () => {
 }
 
 export default Contact
+
+

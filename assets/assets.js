@@ -56,6 +56,11 @@ import be from './Behance.svg';
 import be_dark from './be-dark.svg';
 import linkedin from './In.svg'
 import in_dark from './in-dark.svg';
+import mrym from './mrym.jpeg';
+import maryam from './maryam.jpg';
+import uaarn from './uaarn.jpeg';
+import maryamarif from './maryam.png';
+
 
 export const assets = {
     user_image,
@@ -116,30 +121,50 @@ export const assets = {
     ig_dark,
     linkedin,
     in_dark,
+    mrym,
+    maryam,
+    uaarn,
+    maryamarif,
 };
 
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
+        title: 'UAARN',
+        description: "Nexe-Agent's Product",
+        bgImage: '/uaarn.jpeg',
+        link: 'https://www.uaarn.com'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
+        title: 'Nexe-Agent',
+        description: 'Company Website',
+        bgImage: '/Website.png',
+        link: 'https://www.nexeagent.com'
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'AI Book',
+        description: 'GIAIC Hackathon 1',
+        bgImage: '/AI-Book.png',
+        link: 'https://hackathon-04-sigma.vercel.app/'
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'AI Job Assistant',
+        description: 'Company Project',
+        bgImage: '/Job.png',
+        link: 'https://job-assistant-v1.vercel.app/'
     },
+    {
+        title: 'To-Do App',
+        description: 'GIAIC Hackathon 2',
+        bgImage: '/Todo.png',
+        link: 'https://todo-app-phase-v-7gcr.vercel.app/'
+    },
+    {
+        title: 'AI Travel Assistant',
+        description: 'Company Project',
+        bgImage: '/Travel.png',
+        link: 'https://travel-assistant-f.vercel.app/'
+    }
 ]
 
 export const serviceData = [
@@ -147,12 +172,12 @@ export const serviceData = [
     { icon: assets.ai, title: 'Generative AI', description: 'Generative AI is the process of creating human-like content using machine learning...', link: '' },
     { icon: assets.ui, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
     { icon: assets.robot, title: 'AI Agents', description: 'AI Agents are autonomous programs designed to perceive their environment...', link: '' },
-]
+];
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Python, TypeScript, WordPress, Agentic AI, OpenAI Agents SDK, Generative AI' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'O-Level from The Anchorage School', description2: "A-level from International Grammar School (ongoing)" },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js, Python, TypeScript, Agentic AI, OpenAI Agents SDK, Generative AI' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'O-Levels from The Anchorage School', description2: "A-levels from The Avicenna School" },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 15+ projects', description2: 'Worked with 5+ clients' },
 ];
 
 export const toolsData = [
